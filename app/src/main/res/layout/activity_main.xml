@@ -3,39 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/fragments_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav" />
+
     <LinearLayout
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/navBGColor"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
         <ImageView
+            android:id="@+id/contacts_tab"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/navSelectedColor"
+            android:background="@drawable/tab_background_selector"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="10dp"
             android:src="@drawable/ic_contacts_white_24dp" />
 
         <ImageView
+            android:id="@+id/player_tab"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/tab_background_selector"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="10dp"
-            android:src="@drawable/ic_music_video_white_24dp"
-            android:id="@+id/imageView2" />
+            android:src="@drawable/ic_music_video_white_24dp" />
 
         <ImageView
+            android:id="@+id/alarm_tab"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/tab_background_selector"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="10dp"
-            android:src="@drawable/ic_alarm_white_24dp"
-            android:id="@+id/imageView" />
+            android:src="@drawable/ic_alarm_white_24dp" />
     </LinearLayout>
 </RelativeLayout>
