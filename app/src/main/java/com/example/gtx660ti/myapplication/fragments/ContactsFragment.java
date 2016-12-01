@@ -1,8 +1,8 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.fragments;
 
-import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import com.example.gtx660ti.myapplication.R;
+import com.example.gtx660ti.myapplication.adapters.ContactsAdapter;
+import com.example.gtx660ti.myapplication.models.Contact;
+import com.example.gtx660ti.myapplication.utils.ContactsDBHelper;
 
 /**
  * Created by GTX660TI on 28.11.2016.

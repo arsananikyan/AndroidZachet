@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Zachet</string>
     <string name="contacts">Contacts</string>
+    <string name="player">Player</string>
     <string name="name">Name</string>
     <string name="number">Number</string>
     <string name="edit_contact">Edit Contact</string>

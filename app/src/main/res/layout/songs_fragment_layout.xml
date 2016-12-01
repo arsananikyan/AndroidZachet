@@ -4,10 +4,18 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/contacts_recycler_view"
+        android:id="@+id/songs_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/top_nav"/>
+        android:layout_above="@+id/player_fragment_layout"
+        android:layout_below="@+id/top_nav" />
+
+    <FrameLayout
+        android:id="@+id/player_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="-200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true" />
 
     <RelativeLayout
         android:id="@+id/top_nav"
@@ -19,19 +27,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/contacts"
+            android:text="@string/player"
             android:textColor="@color/white"
             android:textSize="22sp" />
-
-        <ImageView
-            android:id="@+id/add_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/ic_note_add_white_36dp" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -1,14 +1,15 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.gtx660ti.myapplication.R;
+import com.example.gtx660ti.myapplication.fragments.AlarmFragment;
+import com.example.gtx660ti.myapplication.fragments.ContactsFragment;
+import com.example.gtx660ti.myapplication.fragments.SongsFragment;
 
-//    private final static String CONTACTS_TAB = "contacts_tab";
-//    private final static String PLAYER_TAB = "player_tab";
-//    private final static String ALARM_TAB = "alarm_tab";
+public class MainActivity extends AppCompatActivity {
 
     private View contactsTab;
     private View playerTab;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         playerTab = findViewById(R.id.player_tab);
         alarmTab = findViewById(R.id.alarm_tab);
         contactsTab.setSelected(true);
-        getFragmentManager().beginTransaction().replace(R.id.fragments_container, new ContactsFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new ContactsFragment()).commit();
 
         View.OnClickListener tabClickListener = new View.OnClickListener() {
             @Override
@@ -38,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 if (!v.isSelected()) {
                     switch (clickedId) {
                         case R.id.contacts_tab:
-                            getFragmentManager().beginTransaction().replace(R.id.fragments_container, new ContactsFragment()).commit();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new ContactsFragment()).commit();
                             break;
                         case R.id.player_tab:
-                            getFragmentManager().beginTransaction().replace(R.id.fragments_container, new PlayerFragment()).commit();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new SongsFragment()).commit();
                             break;
                         case R.id.alarm_tab:
-                            getFragmentManager().beginTransaction().replace(R.id.fragments_container, new AlarmFragment()).commit();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new AlarmFragment()).commit();
                             break;
                     }
                     setSelectedTab(v);

@@ -1,13 +1,15 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.fragments;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.gtx660ti.myapplication.R;
+
 /**
- * Created by GTX660TI on 28.11.2016.
+ * Created by GTX660TI on 01.12.2016.
  */
 
 public class PlayerFragment extends Fragment {
@@ -15,11 +17,8 @@ public class PlayerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.player_fragment_layout, container, false);
-    }
+        View content = inflater.inflate(R.layout.player_fragment_layout, container, false);
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        return content;
     }
 }

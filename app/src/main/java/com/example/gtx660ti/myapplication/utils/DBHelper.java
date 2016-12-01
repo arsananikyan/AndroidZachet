@@ -1,4 +1,4 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

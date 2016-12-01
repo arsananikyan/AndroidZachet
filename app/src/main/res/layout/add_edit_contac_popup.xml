@@ -13,7 +13,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
-        android:hint="@string/name" />
+        android:hint="@string/name"
+        android:textColor="@color/primaryText" />
 
     <EditText
         android:id="@+id/edit_contact_number"
@@ -23,5 +24,6 @@
         android:layout_marginRight="20dp"
         android:gravity="center"
         android:hint="@string/number"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:textColor="@color/primaryText" />
 </LinearLayout>

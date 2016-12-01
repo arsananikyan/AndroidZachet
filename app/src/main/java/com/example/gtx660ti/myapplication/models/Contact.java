@@ -1,4 +1,4 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.models;
 
 /**
  * Created by GTX660TI on 28.11.2016.

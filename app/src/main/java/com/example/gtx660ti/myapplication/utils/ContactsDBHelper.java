@@ -1,9 +1,11 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.utils;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.gtx660ti.myapplication.models.Contact;
 
 import java.util.ArrayList;
 import java.util.List;

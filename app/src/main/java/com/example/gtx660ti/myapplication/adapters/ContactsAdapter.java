@@ -1,12 +1,14 @@
-package com.example.gtx660ti.myapplication;
+package com.example.gtx660ti.myapplication.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.gtx660ti.myapplication.R;
+import com.example.gtx660ti.myapplication.models.Contact;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,14 +19,12 @@ import java.util.List;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ContactViewHolder> {
 
-    private Context context;
     private ArrayList<Contact> contacts;
     private LayoutInflater inflater;
     private OnItemLongClickListener onItemLongClickListener;
     private OnItemClickListener onItemClickListener;
 
     public ContactsAdapter(Context context) {
-        this.context = context;
         inflater = LayoutInflater.from(context);
     }
 

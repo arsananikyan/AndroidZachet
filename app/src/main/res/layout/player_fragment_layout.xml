@@ -2,11 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="PLAYER" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        android:text="Hard Rock Rock and Roll"
+        android:textColor="@color/white"
+        android:id="@+id/textView" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_stop_white_48dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_play_arrow_white_48dp" />
+    </LinearLayout>
+
 </LinearLayout>
