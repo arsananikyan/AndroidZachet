@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginBottom="15dp"
         android:textSize="20sp"
         android:text="Hard Rock Rock and Roll"
@@ -17,6 +18,7 @@
         android:id="@+id/textView" />
 
     <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seek_bar"
         android:layout_width="match_parent"
         android:padding="10dp"
         android:layout_height="wrap_content" />
@@ -28,6 +30,7 @@
         android:layout_marginTop="15dp">
 
         <ImageView
+            android:id="@+id/stop_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
@@ -35,6 +38,7 @@
             android:src="@drawable/ic_stop_white_48dp" />
 
         <ImageView
+            android:id="@+id/play_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

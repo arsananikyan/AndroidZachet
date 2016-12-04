@@ -34,6 +34,7 @@ public class SongsFragment extends Fragment {
     private SongsAdapter adapter;
     private PlayerFragment playerFragment;
     private View playerFragmentLayout;
+    private Song playingSong;
 
     private ArrayList<String> songs = new ArrayList<>();
 
@@ -51,7 +52,13 @@ public class SongsFragment extends Fragment {
         adapter.setOnItemClickListener(new SongsAdapter.OnItemClickListener() {
             @Override
             public void onClick(Song song, int position) {
-                animatePlayer(!isPlayerVisible, position);
+                if (!isPlayerVisible) {
+                    animatePlayer(true, position);
+                }
+                if (playingSong != song) {
+                    playerFragment.play(song);
+                    playingSong = song;
+                }
             }
         });
         playerFragment = new PlayerFragment();
@@ -84,6 +91,7 @@ public class SongsFragment extends Fragment {
                 recyclerView.smoothScrollToPosition(position);
             }
         });
+
         valueAnimator.start();
     }
 
