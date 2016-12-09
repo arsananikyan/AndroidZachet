@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.gtx660ti.myapplication.R;
-import com.example.gtx660ti.myapplication.fragments.AlarmFragment;
 import com.example.gtx660ti.myapplication.fragments.ContactsFragment;
 import com.example.gtx660ti.myapplication.fragments.SongsFragment;
 
@@ -13,12 +12,10 @@ public class MainActivity extends AppCompatActivity {
 
     private View contactsTab;
     private View playerTab;
-    private View alarmTab;
 
     private void setSelectedTab(View v) {
         contactsTab.setSelected(false);
         playerTab.setSelected(false);
-        alarmTab.setSelected(false);
         v.setSelected(true);
     }
 
@@ -28,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         contactsTab = findViewById(R.id.contacts_tab);
         playerTab = findViewById(R.id.player_tab);
-        alarmTab = findViewById(R.id.alarm_tab);
         contactsTab.setSelected(true);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new ContactsFragment()).commit();
 
@@ -44,9 +40,6 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.player_tab:
                             getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new SongsFragment()).commit();
                             break;
-                        case R.id.alarm_tab:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new AlarmFragment()).commit();
-                            break;
                     }
                     setSelectedTab(v);
                 }
@@ -54,6 +47,5 @@ public class MainActivity extends AppCompatActivity {
         };
         contactsTab.setOnClickListener(tabClickListener);
         playerTab.setOnClickListener(tabClickListener);
-        alarmTab.setOnClickListener(tabClickListener);
     }
 }
